@@ -96,6 +96,10 @@ h3 { font-size: 1.5rem; }
 .entry ul.pts li { margin-bottom: .35rem; max-width: 62ch; }
 .chips { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: .4rem 0 0; padding: 0; }
 .chips li { font-size: .82rem; font-weight: 500; padding: .2rem .65rem; border: 1px solid var(--rule-strong); border-radius: 99px; background: var(--surface); }
+.uni { display: flex; gap: 1.1rem; align-items: flex-start; }
+.uni > div { min-width: 0; }
+.uni-logo { flex: none; width: 112px; height: 64px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 8px 10px; background: #fff; border: 1px solid var(--rule-strong); }
+.uni-logo img { width: auto; height: auto; max-width: 100%; max-height: 46px; }
 .note { margin-top: 1.4rem; padding: 1rem 1.2rem; border-left: 4px solid var(--accent); background: var(--surface); }
 .note strong { display: block; font-family: var(--display); font-size: 1.2rem; letter-spacing: .01em; margin-bottom: .2rem; }
 .note p { margin: 0; }
@@ -159,6 +163,8 @@ h3 { font-size: 1.5rem; }
 @media (max-width: 640px) {
   .entry, .project { grid-template-columns: 1fr; }
   .figs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .uni-logo { width: 88px; height: 56px; }
+  .uni-logo img { max-height: 38px; }
   .figs--one { grid-template-columns: minmax(0, 1fr); }
   .skills div { grid-template-columns: 1fr; gap: .2rem; }
   .closing { grid-template-columns: 1fr; }

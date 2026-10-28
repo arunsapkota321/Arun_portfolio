@@ -64,5 +64,22 @@
     else say(t);
   });
 
+  /* enlarge project figures */
+  var lb = $("#lightbox");
+  if (lb && lb.showModal) {
+    var lbImg = $("#lbImg"), lbCap = $("#lbCap");
+    $$("a.fig").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var im = a.querySelector("img");
+        lbImg.src = a.getAttribute("href"); lbImg.alt = im ? im.alt : "";
+        lbCap.textContent = a.getAttribute("data-cap") || "";
+        lb.showModal();
+      });
+    });
+    $("#lbClose").addEventListener("click", function () { lb.close(); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+  }
+
   var yr = $("#year"); if (yr) yr.textContent = String(new Date().getFullYear());
 })();

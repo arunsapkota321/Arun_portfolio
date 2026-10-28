@@ -56,3 +56,7 @@ Use .webp, .jpg or .png and keep each photo under about 400 KB so the page loads
 ## Change the CV
 
 Replace `assets/cv/Arun_Sapkota_CV.pdf` with the new PDF (same file name).
+
+## Project pictures
+
+Each project in the Projects section can show small figures. Put the image (WebP or JPG, about 1000 px wide) in `assets/images/projects/<project-name>/`, then copy one `<figure>` line inside the project in `index.html` and change the file name and the caption. Clicking a figure on the site opens it larger.
